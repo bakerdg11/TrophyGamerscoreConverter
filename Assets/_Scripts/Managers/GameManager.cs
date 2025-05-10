@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour
 
     public void CalculateGamerscore()
     {
+        if (!string.IsNullOrEmpty(gamerscoreText.text))
+        {
+            return;
+        }
+
         // Handles when a field is empty/blanc
         if (string.IsNullOrWhiteSpace(bronzeInput.text) ||
             string.IsNullOrWhiteSpace(silverInput.text) ||
@@ -82,6 +87,7 @@ public class GameManager : MonoBehaviour
         {
             soundManager.PlayCalculateSound();
             yourGamerscoreIsText.gameObject.SetActive(true);
+            errorText.gameObject.SetActive(false);
         }
 
         int bronze = int.Parse(bronzeInput.text);
