@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 34349085}
   - component: {fileID: 34349084}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_Begin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1131}
+  m_AnchoredPosition: {x: 0, y: -1084}
   m_SizeDelta: {x: 831, y: 254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34349084
@@ -409,6 +409,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963160c9ba8ff384ab619fd75d653ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOSAdUnitId: Interstitial_iOS
+  gameManager: {fileID: 956908702}
 --- !u!114 &237574144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4314e0a754cd879458fab8cd001db32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bannerPosition: 4
+  _androidAdUnitId: Banner_Android
+  _iOSAdUnitId: Banner_iOS
 --- !u!114 &237574145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7e18d69eb520a48b78707e5ee4f0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _androidGameId: 5851553
+  _iOSGameId: 5851552
+  _testMode: 1
 --- !u!4 &237574146
 Transform:
   m_ObjectHideFlags: 0
@@ -1342,7 +1351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &691722363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1801,6 +1810,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fe329c83c48054e8977854a0869d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 1444465967}
+  beginButton: {fileID: 34349084}
+  calculateGamerscore: {fileID: 1138472143}
+  resetButton: {fileID: 1682879503}
+  exitButton: {fileID: 252462989}
+  trophyInputPanel: {fileID: 691722362}
+  bronzeInput: {fileID: 1461239411}
+  silverInput: {fileID: 1561679442}
+  goldInput: {fileID: 623650385}
+  errorText: {fileID: 1854179149}
+  yourGamerscoreIsText: {fileID: 1953283355}
+  gamerscoreText: {fileID: 1695781740}
 --- !u!4 &956908703
 Transform:
   m_ObjectHideFlags: 0
@@ -3030,6 +3051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec2e0bf8c0bd3a4b9306e14aa9747c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 1444465968}
+  beginClickSound: {fileID: 8300000, guid: f5a0dbc891e771a4d9825ccb790aacfd, type: 3}
+  calculateClickSound: {fileID: 8300000, guid: ecd2ff390eff3aa4ab44beafed404284, type: 3}
+  resetClickSound: {fileID: 8300000, guid: 58708a4a595976e43954219c8e5b17cc, type: 3}
 --- !u!82 &1444465968
 AudioSource:
   m_ObjectHideFlags: 0
